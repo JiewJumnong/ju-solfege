@@ -39,7 +39,7 @@ const AMERICAN = [
 /** British / English Tonic Sol-fa Chromatic */
 const BRITISH = [
   'Doh', 'Di', 'Ray', 'Ri', 'Me',
-  'Fah', 'Fi', 'Soh', 'Si', 'Lah', 'Li', 'Si'
+  'Fah', 'Fi', 'Soh', 'Si', 'Lah', 'Li', 'Ti'
 ];
 
 /** Thai Solfège */

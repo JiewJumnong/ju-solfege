@@ -45,7 +45,7 @@ AI singing voice synthesis (SVS) engines.
 | 9 mod 12 | A  | **La**  | **La**  | La  | Lah |
 | 10 mod 12 | A# | **Li** | —       | Li  | Li  |
 | 10 mod 12 | Bb | —      | **Tu**  | Te  | Taw |
-| 11 mod 12 | B  | **Ti** | **Ti**  | Ti  | Si  |
+| 11 mod 12 | B  | **Ti** | **Ti**  | Ti  | Ti  |
 
 ---
 
@@ -157,25 +157,25 @@ Convert a note name string (`"C#4"`, `"Bb3"`) to Ju Solfège.
 
 ## Comparison with Other Systems
 
-| Note | Ju ♯ | Ju ♭ | American | British | Italian |
-|------|------|------|----------|---------|---------|
-| C  | Do  | Do  | Do  | Doh | Do  |
-| C# | **Di** | —   | Di  | Di  | Di  |
-| Db | —   | **Ru** | Ra  | Raw | Ra  |
-| D  | Re  | Re  | Re  | Ray | Re  |
-| D# | **Ri** | —   | Ri  | Ri  | Ri  |
-| Eb | —   | **Mu** | Me  | Maw | Me  |
-| E  | Mi  | Mi  | Mi  | Me  | Mi  |
-| F  | Fa  | Fa  | Fa  | Fah | Fa  |
-| F# | **Fi** | —   | Fi  | Fi  | Fi  |
-| Gb | —   | **Su** | Se  | Saw | Se  |
-| G  | Sol | Sol | Sol | Soh | Sol |
-| G# | **Si** | —   | Si  | Si  | Si  |
-| Ab | —   | **Lu** | Le  | Law | Le  |
-| A  | La  | La  | La  | Lah | La  |
-| A# | **Li** | —   | Li  | Li  | Li  |
-| Bb | —   | **Tu** | Te  | Taw | Te  |
-| B  | Ti  | Ti  | Ti  | Si  | Ti  |
+| Note | Ju ♯ | Ju ♭ | American | British |
+|------|------|------|----------|---------|
+| C  | Do  | Do  | Do  | Doh |
+| C# | **Di** | —   | Di  | Di  |
+| Db | —   | **Ru** | Ra  | Raw |
+| D  | Re  | Re  | Re  | Ray |
+| D# | **Ri** | —   | Ri  | Ri  |
+| Eb | —   | **Mu** | Me  | Maw |
+| E  | Mi  | Mi  | Mi  | Me  |
+| F  | Fa  | Fa  | Fa  | Fah |
+| F# | **Fi** | —   | Fi  | Fi  |
+| Gb | —   | **Su** | Se  | Saw |
+| G  | Sol | Sol | Sol | Soh |
+| G# | **Si** | —   | Si  | Si  |
+| Ab | —   | **Lu** | Le  | Law |
+| A  | La  | La  | La  | Lah |
+| A# | **Li** | —   | Li  | Li  |
+| Bb | —   | **Tu** | Te  | Taw |
+| B  | Ti  | Ti  | Ti  | Ti  |
 
 ---
 
