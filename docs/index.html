@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ju Solfège Chromatic — A fixed-doh chromatic solfège system where sharps use vowel 'i' and flats use vowel 'u'. Invented by Paisan Chamnong (JiewJumnong).">
+<meta name="keywords" content="ju solfege, chromatic solfege, fixed doh, music theory, Paisan Chamnong, JiewJumnong, solfège, singing, SVS">
+<meta name="author" content="Paisan Chamnong">
+<meta property="og:title" content="Ju Solfège Chromatic System">
+<meta property="og:description" content="Sharps use vowel i · Flats use vowel u · Invented by Paisan Chamnong 2025">
+<meta property="og:type" content="website">
+<title>Ju Solfège Chromatic — Paisan Chamnong (JiewJumnong)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #f5c518; --cyan: #00e5ff; --green: #00ff88;
+    --bg: #0a0c12; --surface: #13161f; --card: #1a1e2b;
+    --text: #e8eaf6; --muted: rgba(232,234,246,0.5);
+    --sharp: #00e5ff; --flat: #ff9500;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif;
+         line-height: 1.6; overflow-x: hidden; }
+
+  /* ── Hero ── */
+  .hero { min-height: 100vh; display: flex; flex-direction: column;
+          align-items: center; justify-content: center; text-align: center;
+          padding: 40px 20px; position: relative;
+          background: radial-gradient(ellipse at 50% 0%, rgba(245,197,24,0.12) 0%, transparent 70%); }
+  .hero h1 { font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 8vw, 6rem);
+             font-weight: 900; line-height: 1.05;
+             background: linear-gradient(135deg, var(--gold), #fff 50%, var(--cyan));
+             -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero .subtitle { font-size: clamp(1rem, 3vw, 1.5rem); color: var(--muted);
+                    margin-top: 14px; max-width: 640px; }
+  .hero .rule-box { margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap;
+                    justify-content: center; }
+  .rule-card { background: var(--card); border-radius: 16px; padding: 20px 30px;
+               border: 1px solid rgba(255,255,255,0.1); text-align: center;
+               min-width: 180px; transition: transform 0.2s; }
+  .rule-card:hover { transform: translateY(-4px); }
+  .rule-card .vowel { font-family: 'Outfit', sans-serif; font-size: 4rem;
+                      font-weight: 900; display: block; line-height: 1; }
+  .rule-card .label { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+  .sharp .vowel { color: var(--sharp); }
+  .flat  .vowel { color: var(--flat);  }
+
+  /* ── Sections ── */
+  section { max-width: 960px; margin: 0 auto; padding: 60px 20px; }
+  h2 { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800;
+       margin-bottom: 24px; }
+  h2 span { color: var(--gold); }
+
+  /* ── Chromatic Table ── */
+  .chromatic-grid { display: grid; grid-template-columns: repeat(12, 1fr);
+                    gap: 6px; margin-top: 20px; }
+  .note-cell { background: var(--card); border-radius: 10px; padding: 10px 4px;
+               text-align: center; border: 1px solid rgba(255,255,255,0.07);
+               transition: all 0.2s; cursor: pointer; }
+  .note-cell:hover { border-color: var(--gold); transform: scale(1.05); }
+  .note-cell.black { background: #11141f; }
+  .note-cell .pitch { font-size: 0.7rem; color: var(--muted); }
+  .note-cell .ju-sharp { font-size: 1rem; font-weight: 700; color: var(--sharp); }
+  .note-cell .ju-flat  { font-size: 0.75rem; color: var(--flat); }
+
+  /* ── Comparison Table ── */
+  .cmp-table { width: 100%; border-collapse: collapse; margin-top: 20px;
+               font-size: 0.9rem; }
+  .cmp-table th { background: rgba(245,197,24,0.12); color: var(--gold);
+                  padding: 10px 14px; text-align: left; font-weight: 700; }
+  .cmp-table td { padding: 8px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .cmp-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .ju-s { color: var(--sharp); font-weight: 700; }
+  .ju-f { color: var(--flat);  font-weight: 700; }
+
+  /* ── Interactive ── */
+  .interactive { background: var(--card); border-radius: 20px; padding: 32px;
+                 border: 1px solid rgba(255,255,255,0.08); }
+  .interactive label { font-size: 0.85rem; color: var(--muted); display: block;
+                       margin-bottom: 6px; }
+  .interactive select, .interactive input[type=range] {
+    width: 100%; background: var(--surface); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px; padding: 8px 12px; color: var(--text); font-size: 1rem;
+    margin-bottom: 20px; }
+  .result-big { font-family: 'Outfit', sans-serif; font-size: 4rem; font-weight: 900;
+                text-align: center; color: var(--gold); margin: 20px 0; }
+  .result-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .result-badge { background: var(--surface); border-radius: 8px;
+                  padding: 6px 14px; font-size: 0.85rem; }
+  .result-badge span { color: var(--muted); font-size: 0.75rem; display: block; }
+
+  /* ── Install ── */
+  .install-box { background: #0d1117; border-radius: 12px; padding: 20px 24px;
+                 border: 1px solid rgba(255,255,255,0.1); font-family: monospace;
+                 font-size: 1rem; color: #7ee787; margin: 12px 0; }
+
+  /* ── Footer ── */
+  footer { text-align: center; padding: 40px 20px; color: var(--muted);
+           font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.06); }
+  footer a { color: var(--gold); }
+
+  /* ── Piano ── */
+  .piano { display: flex; justify-content: center; gap: 3px; margin-top: 24px; position: relative; height: 120px; }
+  .white-key { width: 44px; height: 120px; background: linear-gradient(180deg, #e8e8e8, #fff);
+               border-radius: 0 0 6px 6px; border: 1px solid #aaa; display: flex;
+               align-items: flex-end; justify-content: center; padding-bottom: 6px;
+               cursor: pointer; transition: background 0.15s; position: relative; z-index: 1; }
+  .white-key:hover, .white-key.active { background: linear-gradient(180deg, var(--gold), #ffd700); }
+  .black-key { width: 28px; height: 74px; background: linear-gradient(180deg, #2a2a2a, #111);
+               border-radius: 0 0 5px 5px; border: 1px solid #000; position: absolute;
+               top: 0; z-index: 2; display: flex; align-items: flex-end;
+               justify-content: center; padding-bottom: 4px; cursor: pointer;
+               transition: background 0.15s; }
+  .black-key:hover, .black-key.active { background: linear-gradient(180deg, #555, #222); }
+  .key-label { font-size: 9px; font-weight: 700; color: rgba(0,0,0,0.6); }
+  .black-key .key-label { color: rgba(255,255,255,0.7); font-size: 8px; }
+  .key-note { font-size: 7px; color: rgba(255,255,255,0.4); position: absolute; top: 8px; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Ju Solfège<br>Chromatic</h1>
+  <p class="subtitle">
+    A fixed-doh chromatic solfège system designed for the 12-tone scale.<br>
+    One simple rule makes every note memorable.
+  </p>
+  <div class="rule-box">
+    <div class="rule-card sharp">
+      <span class="vowel">i</span>
+      <div class="label">♯ Sharps<br>Di · Ri · Fi · Si · Li</div>
+    </div>
+    <div class="rule-card" style="align-self:center;border-color:var(--gold);padding:24px 36px;">
+      <div style="font-size:2rem;">🎵</div>
+      <div style="font-weight:700;font-size:1.1rem;margin-top:8px;">Diatonic Base</div>
+      <div style="color:var(--muted);font-size:0.85rem;margin-top:4px;">Do · Re · Mi · Fa · Sol · La · Ti</div>
+    </div>
+    <div class="rule-card flat">
+      <span class="vowel">u</span>
+      <div class="label">♭ Flats<br>Du · Ru · Fu · Su · Lu</div>
+    </div>
+  </div>
+  <p style="margin-top:40px;color:var(--muted);font-size:0.85rem;">
+    Invented by <strong style="color:var(--gold)">Paisan Chamnong (JiewJumnong)</strong> · 2025
+  </p>
+</div>
+
+<!-- CHROMATIC TABLE -->
+<section>
+  <h2>The <span>12-Tone</span> Scale</h2>
+  <div class="chromatic-grid" id="chromatic-grid"></div>
+</section>
+
+<!-- INTERACTIVE CONVERTER -->
+<section>
+  <h2><span>Interactive</span> Converter</h2>
+  <div class="interactive">
+    <label>MIDI Note: <strong id="midi-num">60</strong> (<span id="pitch-name">C4</span>)</label>
+    <input type="range" id="midi-slider" min="48" max="84" value="60">
+    <div class="result-big" id="result-ju">Do</div>
+    <div class="result-row" id="result-row"></div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+  <h2><span>Comparison</span> Table</h2>
+  <div style="overflow-x:auto;">
+    <table class="cmp-table" id="cmp-table"></table>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section>
+  <h2><span>Install</span></h2>
+  <div class="install-box">npm install ju-solfege</div>
+  <div class="install-box" style="color:#79c0ff;">
+    &lt;script src="https://cdn.jsdelivr.net/npm/ju-solfege/index.js"&gt;&lt;/script&gt;
+  </div>
+  <pre style="background:#0d1117;border-radius:12px;padding:24px;margin-top:16px;
+              overflow-x:auto;font-size:0.9rem;color:#e6edf3;border:1px solid rgba(255,255,255,0.1);">
+<span style="color:#79c0ff">const</span> { <span style="color:#e6edf3">juSolfege, labelMelody</span> } = <span style="color:#79c0ff">require</span>(<span style="color:#a5d6ff">'ju-solfege'</span>);
+
+juSolfege(<span style="color:#79c0ff">61</span>);               <span style="color:#8b949e">// "Di"   (C#4, sharp variant)</span>
+juSolfege(<span style="color:#79c0ff">61</span>, <span style="color:#a5d6ff">'flat'</span>);       <span style="color:#8b949e">// "Du"   (Db4, flat variant)</span>
+
+labelMelody([<span style="color:#79c0ff">60</span>,<span style="color:#79c0ff">62</span>,<span style="color:#79c0ff">64</span>,<span style="color:#79c0ff">65</span>,<span style="color:#79c0ff">67</span>]);
+<span style="color:#8b949e">// => ['Do','Re','Mi','Fa','Sol']</span>
+  </pre>
+</section>
+
+<footer>
+  <p>
+    <strong>Ju Solfège Chromatic</strong> — Invented by
+    <a href="https://github.com/JiewJumnong">Paisan Chamnong (JiewJumnong)</a>
+  </p>
+  <p style="margin-top:6px;">© 2025 Paisan Chamnong · MIT License ·
+    <a href="https://github.com/JiewJumnong/ju-solfege">GitHub</a> ·
+    <a href="https://www.npmjs.com/package/ju-solfege">npm</a>
+  </p>
+</footer>
+
+<script src="../index.js"></script>
+<script>
+  const { toSolfege, TABLES, SYSTEM_INFO } = window.JuSolfege;
+
+  const PITCH_S = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+  const PITCH_F = ['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'];
+  const IS_BLACK = [false,true,false,true,false,false,true,false,true,false,true,false];
+
+  // ── Chromatic Grid ──
+  const grid = document.getElementById('chromatic-grid');
+  for (let pc = 0; pc < 12; pc++) {
+    const cell = document.createElement('div');
+    cell.className = 'note-cell' + (IS_BLACK[pc] ? ' black' : '');
+    cell.innerHTML = `
+      <div class="ju-sharp">${TABLES.JU_SHARP[pc]}</div>
+      ${IS_BLACK[pc] ? `<div class="ju-flat">${TABLES.JU_FLAT[pc]}</div>` : ''}
+      <div class="pitch">${IS_BLACK[pc] ? PITCH_S[pc]+'/'+PITCH_F[pc] : PITCH_S[pc]}</div>
+    `;
+    grid.appendChild(cell);
+  }
+
+  // ── Comparison Table ──
+  const rows = [
+    ['C','Do','Do','Do','Doh','Do'],
+    ['C#','Di','—','Di','Di','Di'],
+    ['Db','—','Du','Ra','Ra','Ra'],
+    ['D','Re','Re','Re','Ray','Re'],
+    ['D#','Ri','—','Ri','Ri','Ri'],
+    ['Eb','—','Ru','Me','Me','Me'],
+    ['E','Mi','Mi','Mi','Me','Mi'],
+    ['F','Fa','Fa','Fa','Fah','Fa'],
+    ['F#','Fi','—','Fi','Fi','Fi'],
+    ['Gb','—','Fu','Se','Se','Se'],
+    ['G','Sol','Sol','Sol','Soh','Sol'],
+    ['G#','Si','—','Si','Si','Si'],
+    ['Ab','—','Su','Le','Le','Le'],
+    ['A','La','La','La','Lah','La'],
+    ['A#','Li','—','Li','Li','Li'],
+    ['Bb','—','Lu','Te','Te','Te'],
+    ['B','Ti','Ti','Ti','Si','Ti'],
+  ];
+  const headers = ['Note','Ju ♯ (Sharp)','Ju ♭ (Flat)','American','British','Italian'];
+  const tbl = document.getElementById('cmp-table');
+  tbl.innerHTML = '<tr>' + headers.map(h=>`<th>${h}</th>`).join('') + '</tr>'
+    + rows.map(r => '<tr>'
+      + `<td><strong>${r[0]}</strong></td>`
+      + `<td class="ju-s">${r[1]}</td>`
+      + `<td class="ju-f">${r[2]}</td>`
+      + r.slice(3).map(v=>`<td>${v}</td>`).join('')
+      + '</tr>').join('');
+
+  // ── MIDI Slider ──
+  const slider = document.getElementById('midi-slider');
+  const midiNum = document.getElementById('midi-num');
+  const pitchName = document.getElementById('pitch-name');
+  const resultJu = document.getElementById('result-ju');
+  const resultRow = document.getElementById('result-row');
+
+  function updateConverter() {
+    const midi = parseInt(slider.value);
+    const pc   = midi % 12;
+    const oct  = Math.floor(midi / 12) - 1;
+    const pitch = PITCH_S[pc] + oct;
+    midiNum.textContent = midi;
+    pitchName.textContent = pitch;
+    resultJu.textContent = toSolfege(midi, 'ju_sharp');
+
+    const systems = [
+      { label:'Ju ♯', sys:'ju_sharp', color:'#00e5ff' },
+      { label:'Ju ♭', sys:'ju_flat',  color:'#ff9500' },
+      { label:'American', sys:'american', color:'#fff' },
+      { label:'British',  sys:'british',  color:'#7ee8fa' },
+      { label:'Thai',     sys:'thai',     color:'#00ff88' },
+      { label:'Pitch',    sys:'pitch',    color:'rgba(255,255,255,0.4)' },
+    ];
+    resultRow.innerHTML = systems.map(s => `
+      <div class="result-badge">
+        <strong style="color:${s.color}">${toSolfege(midi, s.sys)}</strong>
+        <span>${s.label}</span>
+      </div>`).join('');
+  }
+
+  slider.addEventListener('input', updateConverter);
+  updateConverter();
+</script>
+</body>
+</html>
