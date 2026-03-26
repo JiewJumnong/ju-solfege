@@ -179,6 +179,14 @@ Convert a note name string (`"C#4"`, `"Bb3"`) to Ju Solfège.
 
 ---
 
+## 🇹🇭 Thai Phonetic Extensions for SVS
+
+For developers working with Singing Voice Synthesis (SVS) or AI vocal generation, an official **phonetic extension case study** has been published. This extension establishes the use of Thai long vowels (`-ue`, `-ia`, `-uea`, `-ua`) as alternatives for descending flats in order to improve formant resonance and natural phonation.
+
+👉 **[Read the Official Thai Vowel Case Study & Usage Terms (THAI_EXTENSION.md)](THAI_EXTENSION.md)**
+
+---
+
 ## Applications
 
 - **AI Singing Voice Synthesis (SVS)** — Used in [Singeria SVS Engine](https://github.com/JiewJumnong/singeria)
