@@ -157,25 +157,25 @@ Convert a note name string (`"C#4"`, `"Bb3"`) to Ju Solfège.
 
 ## Comparison with Other Systems
 
-| Note | Ju ♯ | Ju ♭ | Ju Alt ♯ | Ju Alt ♭ | American | British |
-|------|------|------|----------|----------|----------|---------|
-| C  | Do  | Do  | Doh | Doh | Do  | Doh |
-| C# | **Di** | —   | **di** | —   | Di  | Di  |
-| Db | —   | **Ru** | —   | **ru** | Ra  | Raw |
-| D  | Re  | Re  | Re  | Re  | Re  | Ray |
-| D# | **Ri** | —   | **ri** | —   | Ri  | Ri  |
-| Eb | —   | **Mu** | —   | **mu** | Me  | Maw |
-| E  | Mi  | Mi  | Mi  | Mi  | Mi  | Me  |
-| F  | Fa  | Fa  | Fah | Fah | Fa  | Fah |
-| F# | **Fi** | —   | **fi** | —   | Fi  | Fi  |
-| Gb | —   | **Su** | —   | **su** | Se  | Saw |
-| G  | Sol | Sol | Sol | Sol | Sol | Soh |
-| G# | **Si** | —   | **si** | —   | Si  | Si  |
-| Ab | —   | **Lu** | —   | **lu** | Le  | Law |
-| A  | La  | La  | Lah | Lah | La  | Lah |
-| A# | **Li** | —   | **li** | —   | Li  | Li  |
-| Bb | —   | **Tu** | —   | **tu** | Te  | Taw |
-| B  | Ti  | Ti  | Ti  | Ti  | Ti  | Ti  |
+| Note | Ju ♯ | Ju ♭ | TUE | TIA | TUEA | TUA | American | British |
+|------|------|------|-----|-----|------|-----|----------|---------|
+| C  | Do  | Do  | Do  | Do  | Do   | Do  | Do  | Doh |
+| C# | **Di** | —   | —   | —   | —    | —   | Di  | Di  |
+| Db | —   | **Ru** | **Rue** | **Ria** | **Ruea** | **Rua** | Ra  | Raw |
+| D  | Re  | Re  | Re  | Re  | Re   | Re  | Re  | Ray |
+| D# | **Ri** | —   | —   | —   | —    | —   | Ri  | Ri  |
+| Eb | —   | **Mu** | **Mue** | **Mia** | **Muea** | **Mua** | Me  | Maw |
+| E  | Mi  | Mi  | Mi  | Mi  | Mi   | Mi  | Mi  | Me  |
+| F  | Fa  | Fa  | Fa  | Fa  | Fa   | Fa  | Fa  | Fah |
+| F# | **Fi** | —   | —   | —   | —    | —   | Fi  | Fi  |
+| Gb | —   | **Su** | **Sue** | **Sia** | **Suea** | **Sua** | Se  | Saw |
+| G  | Sol | Sol | Sol | Sol | Sol  | Sol | Sol | Soh |
+| G# | **Si** | —   | —   | —   | —    | —   | Si  | Si  |
+| Ab | —   | **Lu** | **Lue** | **Lia** | **Luea** | **Lua** | Le  | Law |
+| A  | La  | La  | La  | La  | La   | La  | La  | Lah |
+| A# | **Li** | —   | —   | —   | —    | —   | Li  | Li  |
+| Bb | —   | **Tu** | **Tue** | **Tia** | **Tuea** | **Tua** | Te  | Taw |
+| B  | Ti  | Ti  | Ti  | Ti  | Ti   | Ti  | Ti  | Ti  |
 
 ---
 
