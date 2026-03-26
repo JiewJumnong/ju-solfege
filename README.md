@@ -31,20 +31,20 @@ AI singing voice synthesis (SVS) engines.
 |------|-------|-------------|------------|----------|---------|
 | 0 mod 12 | C  | **Do**  | **Do**  | Do  | Doh |
 | 1 mod 12 | C# | **Di**  | —       | Di  | Di  |
-| 1 mod 12 | Db | —       | **Ru**  | Ra  | Ra  |
+| 1 mod 12 | Db | —       | **Ru**  | Ra  | Raw |
 | 2 mod 12 | D  | **Re**  | **Re**  | Re  | Ray |
 | 3 mod 12 | D# | **Ri**  | —       | Ri  | Ri  |
-| 3 mod 12 | Eb | —       | **Mu**  | Me  | Me  |
+| 3 mod 12 | Eb | —       | **Mu**  | Me  | Maw |
 | 4 mod 12 | E  | **Mi**  | **Mi**  | Mi  | Me  |
 | 5 mod 12 | F  | **Fa**  | **Fa**  | Fa  | Fah |
 | 6 mod 12 | F# | **Fi**  | —       | Fi  | Fi  |
-| 6 mod 12 | Gb | —       | **Su**  | Se  | Se  |
+| 6 mod 12 | Gb | —       | **Su**  | Se  | Saw |
 | 7 mod 12 | G  | **Sol** | **Sol** | Sol | Soh |
 | 8 mod 12 | G# | **Si**  | —       | Si  | Si  |
-| 8 mod 12 | Ab | —       | **Lu**  | Le  | Le  |
+| 8 mod 12 | Ab | —       | **Lu**  | Le  | Law |
 | 9 mod 12 | A  | **La**  | **La**  | La  | Lah |
 | 10 mod 12 | A# | **Li** | —       | Li  | Li  |
-| 10 mod 12 | Bb | —      | **Tu**  | Te  | Te  |
+| 10 mod 12 | Bb | —      | **Tu**  | Te  | Taw |
 | 11 mod 12 | B  | **Ti** | **Ti**  | Ti  | Si  |
 
 ---
@@ -161,20 +161,20 @@ Convert a note name string (`"C#4"`, `"Bb3"`) to Ju Solfège.
 |------|------|------|----------|---------|---------|
 | C  | Do  | Do  | Do  | Doh | Do  |
 | C# | **Di** | —   | Di  | Di  | Di  |
-| Db | —   | **Ru** | Ra  | Ra  | Ra  |
+| Db | —   | **Ru** | Ra  | Raw | Ra  |
 | D  | Re  | Re  | Re  | Ray | Re  |
 | D# | **Ri** | —   | Ri  | Ri  | Ri  |
-| Eb | —   | **Mu** | Me  | Me  | Me  |
+| Eb | —   | **Mu** | Me  | Maw | Me  |
 | E  | Mi  | Mi  | Mi  | Me  | Mi  |
 | F  | Fa  | Fa  | Fa  | Fah | Fa  |
 | F# | **Fi** | —   | Fi  | Fi  | Fi  |
-| Gb | —   | **Su** | Se  | Se  | Se  |
+| Gb | —   | **Su** | Se  | Saw | Se  |
 | G  | Sol | Sol | Sol | Soh | Sol |
 | G# | **Si** | —   | Si  | Si  | Si  |
-| Ab | —   | **Lu** | Le  | Le  | Le  |
+| Ab | —   | **Lu** | Le  | Law | Le  |
 | A  | La  | La  | La  | Lah | La  |
 | A# | **Li** | —   | Li  | Li  | Li  |
-| Bb | —   | **Tu** | Te  | Te  | Te  |
+| Bb | —   | **Tu** | Te  | Taw | Te  |
 | B  | Ti  | Ti  | Ti  | Si  | Ti  |
 
 ---
