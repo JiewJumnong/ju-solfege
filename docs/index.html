@@ -173,7 +173,13 @@
     <div style="margin-top:30px; padding:15px; border-radius:8px; border:1px solid #30363d; background: rgba(255,166,87,0.05);">
         <h4 style="color:var(--gold); margin:0 0 5px 0;">🇹🇭 Academic Case Study: Thai "T" Extensions for SVS</h4>
         <p style="margin:0 0 10px 0; font-size:14px; color:#c9d1d9;">For developers working with Singing Voice Synthesis (SVS) AI, consider our official long-vowel Thai phonetic extensions (TUE, TIA, TUEA, TUA) to optimize descending flat formants.</p>
-        <a href="https://github.com/JiewJumnong/ju-solfege/blob/main/THAI_EXTENSION.md" target="_blank" style="color:#58a6ff; text-decoration:none; font-weight:bold; border:1px solid #58a6ff; padding:4px 8px; border-radius:4px; display:inline-block;">👉 Read the Official Guide & Terms of Use</a>
+        <table style="width:100%; max-width:500px; font-size:13px; color:#c9d1d9; border-collapse:collapse; margin-bottom:15px; background:#0d1117; border:1px solid #30363d;">
+            <tr style="background:#161b22; color:var(--flat);"><th style="padding:6px;border:1px solid #30363d;">1. Base Node</th><th style="padding:6px;border:1px solid #30363d;">2. Standard Flat ♭ (-u)</th><th style="padding:6px;border:1px solid #30363d;">3. Thai Ex. 4 (-ัว)</th></tr>
+            <tr><td style="padding:6px;border:1px solid #30363d;text-align:center;">Re</td><td style="padding:6px;border:1px solid #30363d;text-align:center;">Ru</td><td style="padding:6px;border:1px solid #30363d;text-align:center;color:#00ff88;font-weight:bold;">Rua (รัว)</td></tr>
+            <tr><td style="padding:6px;border:1px solid #30363d;text-align:center;">Mi</td><td style="padding:6px;border:1px solid #30363d;text-align:center;">Mu</td><td style="padding:6px;border:1px solid #30363d;text-align:center;color:#00ff88;font-weight:bold;">Mua (มัว)</td></tr>
+            <tr><td style="padding:6px;border:1px solid #30363d;text-align:center;font-style:italic;" colspan="3">...and 3 other vowel rules (-ue, -ia, -uea) with 5 flat variants.</td></tr>
+        </table>
+        <a href="https://github.com/JiewJumnong/ju-solfege/blob/main/THAI_EXTENSION.md" target="_blank" style="color:#58a6ff; text-decoration:none; font-weight:bold; border:1px solid #58a6ff; padding:4px 8px; border-radius:4px; display:inline-block;">👉 Read the Full Matrix & Official Guides</a>
     </div>
   </div>
 </section>
@@ -208,7 +214,7 @@ labelMelody([<span style="color:#79c0ff">60</span>,<span style="color:#79c0ff">6
   </p>
 </footer>
 
-<script src="../index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ju-solfege@1.0.8/index.js"></script>
 <script>
   const { toSolfege, TABLES, SYSTEM_INFO } = window.JuSolfege;
 
@@ -231,37 +237,39 @@ labelMelody([<span style="color:#79c0ff">60</span>,<span style="color:#79c0ff">6
 
   // ── Comparison Table ──
   const rows = [
-    ['C','Do','Do','Do','Do','Do','Do','Do','Doh'],
-    ['C#','Di','—','—','—','—','—','Di','Di'],
-    ['Db','—','Ru','Rue','Ria','Ruea','Rua','Ra','Raw'],
-    ['D','Re','Re','Re','Re','Re','Re','Re','Ray'],
-    ['D#','Ri','—','—','—','—','—','Ri','Ri'],
-    ['Eb','—','Mu','Mue','Mia','Muea','Mua','Me','Maw'],
-    ['E','Mi','Mi','Mi','Mi','Mi','Mi','Mi','Me'],
-    ['F','Fa','Fa','Fa','Fa','Fa','Fa','Fa','Fah'],
-    ['F#','Fi','—','—','—','—','—','Fi','Fi'],
-    ['Gb','—','Su','Sue','Sia','Suea','Sua','Se','Saw'],
-    ['G','Sol','Sol','Sol','Sol','Sol','Sol','Sol','Soh'],
-    ['G#','Si','—','—','—','—','—','Si','Si'],
-    ['Ab','—','Lu','Lue','Lia','Luea','Lua','Le','Law'],
-    ['A','La','La','La','La','La','La','La','Lah'],
-    ['A#','Li','—','—','—','—','—','Li','Li'],
-    ['Bb','—','Tu','Tue','Tia','Tuea','Tua','Te','Taw'],
-    ['B','Ti','Ti','Ti','Ti','Ti','Ti','Ti','Ti']
+    ['C','Do','Do','Doh','Doh','Do','Do','Do','Do','Do','Doh'],
+    ['C#','Di','—','di','—','—','—','—','—','Di','Di'],
+    ['Db','—','Ru','—','ru','Rue','Ria','Ruea','Rua','Ra','Raw'],
+    ['D','Re','Re','Re','Re','Re','Re','Re','Re','Re','Ray'],
+    ['D#','Ri','—','ri','—','—','—','—','—','Ri','Ri'],
+    ['Eb','—','Mu','—','mu','Mue','Mia','Muea','Mua','Me','Maw'],
+    ['E','Mi','Mi','Mi','Mi','Mi','Mi','Mi','Mi','Mi','Me'],
+    ['F','Fa','Fa','Fah','Fah','Fa','Fa','Fa','Fa','Fa','Fah'],
+    ['F#','Fi','—','fi','—','—','—','—','—','Fi','Fi'],
+    ['Gb','—','Su','—','su','Sue','Sia','Suea','Sua','Se','Saw'],
+    ['G','Sol','Sol','Sol','Sol','Sol','Sol','Sol','Sol','Sol','Soh'],
+    ['G#','Si','—','si','—','—','—','—','—','Si','Si'],
+    ['Ab','—','Lu','—','lu','Lue','Lia','Luea','Lua','Le','Law'],
+    ['A','La','La','Lah','Lah','La','La','La','La','La','Lah'],
+    ['A#','Li','—','li','—','—','—','—','—','Li','Li'],
+    ['Bb','—','Tu','—','tu','Tue','Tia','Tuea','Tua','Te','Taw'],
+    ['B','Ti','Ti','Ti','Ti','Ti','Ti','Ti','Ti','Ti','Ti']
   ];
-  const headers = ['Note','Ju ♯','Ju ♭','TUE','TIA','TUEA','TUA','Amer.','Brit.'];
+  const headers = ['Note','Ju ♯','Ju ♭','JuAlt ♯','JuAlt ♭','TUE(อือ)','TIA(เอีย)','TUEA(เอือ)','TUA(อัว)','Amer.','Brit.'];
   const tbl = document.getElementById('cmp-table');
   tbl.innerHTML = '<tr>' + headers.map(h=>`<th>${h}</th>`).join('') + '</tr>'
     + rows.map(r => '<tr>'
       + `<td><strong>${r[0]}</strong></td>`
       + `<td class="ju-s">${r[1]}</td>`
       + `<td class="ju-f">${r[2]}</td>`
-      + `<td class="ju-f">${r[3]}</td>`
-      + `<td class="ju-f">${r[4]}</td>`
+      + `<td>${r[3]}</td>`
+      + `<td>${r[4]}</td>`
       + `<td class="ju-f">${r[5]}</td>`
       + `<td class="ju-f">${r[6]}</td>`
-      + `<td>${r[7]}</td>`
-      + `<td>${r[8]}</td>`
+      + `<td class="ju-f">${r[7]}</td>`
+      + `<td class="ju-f">${r[8]}</td>`
+      + `<td>${r[9]}</td>`
+      + `<td>${r[10]}</td>`
       + '</tr>').join('');
 
   // ── MIDI Slider ──
