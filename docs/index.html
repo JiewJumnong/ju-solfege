@@ -225,25 +225,25 @@ labelMelody([<span style="color:#79c0ff">60</span>,<span style="color:#79c0ff">6
 
   // ── Comparison Table ──
   const rows = [
-    ['C','Do','Do','Do','Doh','Do'],
-    ['C#','Di','—','Di','Di','Di'],
-    ['Db','—','Ru','Ra','Raw','Ra'],
-    ['D','Re','Re','Re','Ray','Re'],
-    ['D#','Ri','—','Ri','Ri','Ri'],
-    ['Eb','—','Mu','Me','Maw','Me'],
-    ['E','Mi','Mi','Mi','Me','Mi'],
-    ['F','Fa','Fa','Fa','Fah','Fa'],
-    ['F#','Fi','—','Fi','Fi','Fi'],
-    ['Gb','—','Su','Se','Saw','Se'],
-    ['G','Sol','Sol','Sol','Soh','Sol'],
-    ['G#','Si','—','Si','Si','Si'],
-    ['Ab','—','Lu','Le','Law','Le'],
-    ['A','La','La','La','Lah','La'],
-    ['A#','Li','—','Li','Li','Li'],
-    ['Bb','—','Tu','Te','Taw','Te'],
-    ['B','Ti','Ti','Ti','Si','Ti'],
+    ['C','Do','Do','Do','Doh'],
+    ['C#','Di','—','Di','Di'],
+    ['Db','—','Ru','Ra','Raw'],
+    ['D','Re','Re','Re','Ray'],
+    ['D#','Ri','—','Ri','Ri'],
+    ['Eb','—','Mu','Me','Maw'],
+    ['E','Mi','Mi','Mi','Me'],
+    ['F','Fa','Fa','Fa','Fah'],
+    ['F#','Fi','—','Fi','Fi'],
+    ['Gb','—','Su','Se','Saw'],
+    ['G','Sol','Sol','Sol','Soh'],
+    ['G#','Si','—','Si','Si'],
+    ['Ab','—','Lu','Le','Law'],
+    ['A','La','La','La','Lah'],
+    ['A#','Li','—','Li','Li'],
+    ['Bb','—','Tu','Te','Taw'],
+    ['B','Ti','Ti','Ti','Si'],
   ];
-  const headers = ['Note','Ju ♯ (Sharp)','Ju ♭ (Flat)','American','British','Italian'];
+  const headers = ['Note','Ju ♯ (Sharp)','Ju ♭ (Flat)','American','British'];
   const tbl = document.getElementById('cmp-table');
   tbl.innerHTML = '<tr>' + headers.map(h=>`<th>${h}</th>`).join('') + '</tr>'
     + rows.map(r => '<tr>'
