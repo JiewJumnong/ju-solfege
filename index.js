@@ -26,8 +26,8 @@ const JU_SHARP = [
 
 /** Ju Solfège — Flat variant (chromatic alterations rendered with vowel 'u') */
 const JU_FLAT = [
-  'Do', 'Du', 'Re', 'Ru', 'Mi',
-  'Fa', 'Fu', 'Sol', 'Su', 'La', 'Lu', 'Ti'
+  'Do', 'Ru', 'Re', 'Mu', 'Mi',
+  'Fa', 'Su', 'Sol', 'Lu', 'La', 'Tu', 'Ti'
 ];
 
 /** American Fixed-doh Chromatic (for comparison reference) */
@@ -220,7 +220,7 @@ const SYSTEM_INFO = {
   license:   'MIT',
   rule: {
     sharp: "Chromatic sharp notes replace the main vowel with 'i' (Di, Ri, Fi, Si, Li)",
-    flat:  "Chromatic flat  notes replace the main vowel with 'u' (Du, Ru, Fu, Su, Lu)",
+    flat:  "Chromatic flat  notes replace the main vowel with 'u' (Ru, Mu, Su, Lu, Tu)",
   },
   diatonic:  ['Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Ti'],
   chromatic_sharp: JU_SHARP,

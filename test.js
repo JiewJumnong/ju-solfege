@@ -17,20 +17,20 @@ console.log('\n═══ Ju Solfège Core Tests ══════════�
 console.log('── juSolfege() ──');
 assert('C4  sharp',  js.juSolfege(60, 'sharp'),      'Do');
 assert('C#4 sharp',  js.juSolfege(61, 'sharp'),      'Di');
-assert('Db4 flat',   js.juSolfege(61, 'flat'),       'Du');
+assert('Db4 flat',   js.juSolfege(61, 'flat'),       'Ru');
 assert('D4  sharp',  js.juSolfege(62, 'sharp'),      'Re');
 assert('D#4 sharp',  js.juSolfege(63, 'sharp'),      'Ri');
-assert('Eb4 flat',   js.juSolfege(63, 'flat'),       'Ru');
+assert('Eb4 flat',   js.juSolfege(63, 'flat'),       'Mu');
 assert('E4  sharp',  js.juSolfege(64, 'sharp'),      'Mi');
 assert('F4  sharp',  js.juSolfege(65, 'sharp'),      'Fa');
 assert('F#4 sharp',  js.juSolfege(66, 'sharp'),      'Fi');
-assert('Gb4 flat',   js.juSolfege(66, 'flat'),       'Fu');
+assert('Gb4 flat',   js.juSolfege(66, 'flat'),       'Su');
 assert('G4  sharp',  js.juSolfege(67, 'sharp'),      'Sol');
 assert('G#4 sharp',  js.juSolfege(68, 'sharp'),      'Si');
-assert('Ab4 flat',   js.juSolfege(68, 'flat'),       'Su');
+assert('Ab4 flat',   js.juSolfege(68, 'flat'),       'Lu');
 assert('A4  sharp',  js.juSolfege(69, 'sharp'),      'La');
 assert('A#4 sharp',  js.juSolfege(70, 'sharp'),      'Li');
-assert('Bb4 flat',   js.juSolfege(70, 'flat'),       'Lu');
+assert('Bb4 flat',   js.juSolfege(70, 'flat'),       'Tu');
 assert('B4  sharp',  js.juSolfege(71, 'sharp'),      'Ti');
 assert('C5  sharp',  js.juSolfege(72, 'sharp'),      'Do');
 
@@ -46,7 +46,7 @@ assert('Num      F#', js.toSolfege(66, 'num'),      '4#');
 
 console.log('\n── fromNoteName() ──');
 assert('C#4 → Di', js.fromNoteName('C#4').syllable,     'Di');
-assert('Bb3 → Lu', js.fromNoteName('Bb3','flat').syllable, 'Lu');
+assert('Bb3 → Tu', js.fromNoteName('Bb3','flat').syllable, 'Tu');
 assert('G#5 → Si', js.fromNoteName('G#5').syllable,     'Si');
 
 console.log('\n── labelMelody() ──');

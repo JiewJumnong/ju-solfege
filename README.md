@@ -18,7 +18,7 @@ memorable rule for accidentals:
 | Direction | Rule | Vowel |
 |-----------|------|-------|
 | **Sharp ♯** | Replace the main vowel with **i** | Di, Ri, Fi, Si, Li |
-| **Flat ♭**  | Replace the main vowel with **u** | Du, Ru, Fu, Su, Lu |
+| **Flat ♭**  | Replace the main vowel with **u** | Ru, Mu, Su, Lu, Tu |
 
 This makes the system easy to remember, phonetically distinct, and suitable for
 AI singing voice synthesis (SVS) engines.
@@ -31,20 +31,20 @@ AI singing voice synthesis (SVS) engines.
 |------|-------|-------------|------------|----------|---------|
 | 0 mod 12 | C  | **Do**  | **Do**  | Do  | Doh |
 | 1 mod 12 | C# | **Di**  | —       | Di  | Di  |
-| 1 mod 12 | Db | —       | **Du**  | Ra  | Ra  |
+| 1 mod 12 | Db | —       | **Ru**  | Ra  | Ra  |
 | 2 mod 12 | D  | **Re**  | **Re**  | Re  | Ray |
 | 3 mod 12 | D# | **Ri**  | —       | Ri  | Ri  |
-| 3 mod 12 | Eb | —       | **Ru**  | Me  | Me  |
+| 3 mod 12 | Eb | —       | **Mu**  | Me  | Me  |
 | 4 mod 12 | E  | **Mi**  | **Mi**  | Mi  | Me  |
 | 5 mod 12 | F  | **Fa**  | **Fa**  | Fa  | Fah |
 | 6 mod 12 | F# | **Fi**  | —       | Fi  | Fi  |
-| 6 mod 12 | Gb | —       | **Fu**  | Se  | Se  |
+| 6 mod 12 | Gb | —       | **Su**  | Se  | Se  |
 | 7 mod 12 | G  | **Sol** | **Sol** | Sol | Soh |
 | 8 mod 12 | G# | **Si**  | —       | Si  | Si  |
-| 8 mod 12 | Ab | —       | **Su**  | Le  | Le  |
+| 8 mod 12 | Ab | —       | **Lu**  | Le  | Le  |
 | 9 mod 12 | A  | **La**  | **La**  | La  | Lah |
 | 10 mod 12 | A# | **Li** | —       | Li  | Li  |
-| 10 mod 12 | Bb | —      | **Lu**  | Te  | Te  |
+| 10 mod 12 | Bb | —      | **Tu**  | Te  | Te  |
 | 11 mod 12 | B  | **Ti** | **Ti**  | Ti  | Si  |
 
 ---
@@ -82,12 +82,12 @@ const { juSolfege, toSolfege, labelMelody, chromaticScale } = require('ju-solfeg
 
 // MIDI → Ju Solfège
 juSolfege(61);              // "Di"   (C#4, sharp variant)
-juSolfege(61, 'flat');      // "Du"   (Db4, flat variant)
+juSolfege(61, 'flat');      // "Ru"   (Db4, flat variant)
 juSolfege(61, 'sharp', true); // "Di4"  (with octave)
 
 // Multi-system conversion
 toSolfege(63, 'ju_sharp');  // "Ri"
-toSolfege(63, 'ju_flat');   // "Ru"
+toSolfege(63, 'ju_flat');   // "Mu"
 toSolfege(63, 'american');  // "Ri"
 toSolfege(63, 'british');   // "Ri"
 toSolfege(60, 'thai');      // "โด"
@@ -113,7 +113,7 @@ chromaticScale(60, 'sharp');
 <script>
   const { juSolfege, toSolfege } = window.JuSolfege;
   console.log(juSolfege(61));           // "Di"
-  console.log(toSolfege(66, 'ju_flat')); // "Fu"
+  console.log(toSolfege(66, 'ju_flat')); // "Su"
 </script>
 ```
 
@@ -161,20 +161,20 @@ Convert a note name string (`"C#4"`, `"Bb3"`) to Ju Solfège.
 |------|------|------|----------|---------|---------|
 | C  | Do  | Do  | Do  | Doh | Do  |
 | C# | **Di** | —   | Di  | Di  | Di  |
-| Db | —   | **Du** | Ra  | Ra  | Ra  |
+| Db | —   | **Ru** | Ra  | Ra  | Ra  |
 | D  | Re  | Re  | Re  | Ray | Re  |
 | D# | **Ri** | —   | Ri  | Ri  | Ri  |
-| Eb | —   | **Ru** | Me  | Me  | Me  |
+| Eb | —   | **Mu** | Me  | Me  | Me  |
 | E  | Mi  | Mi  | Mi  | Me  | Mi  |
 | F  | Fa  | Fa  | Fa  | Fah | Fa  |
 | F# | **Fi** | —   | Fi  | Fi  | Fi  |
-| Gb | —   | **Fu** | Se  | Se  | Se  |
+| Gb | —   | **Su** | Se  | Se  | Se  |
 | G  | Sol | Sol | Sol | Soh | Sol |
 | G# | **Si** | —   | Si  | Si  | Si  |
-| Ab | —   | **Su** | Le  | Le  | Le  |
+| Ab | —   | **Lu** | Le  | Le  | Le  |
 | A  | La  | La  | La  | Lah | La  |
 | A# | **Li** | —   | Li  | Li  | Li  |
-| Bb | —   | **Lu** | Te  | Te  | Te  |
+| Bb | —   | **Tu** | Te  | Te  | Te  |
 | B  | Ti  | Ti  | Ti  | Si  | Ti  |
 
 ---

@@ -1,6 +1,6 @@
 {
   "name": "ju-solfege",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ju Solfège Chromatic — A fixed-doh chromatic solfège system invented by Paisan Chamnong (JiewJumnong). Sharps use the 'i' vowel, flats use the 'u' vowel. Designed for music education and AI singing voice synthesis.",
   "main": "index.js",
   "module": "index.esm.js",
