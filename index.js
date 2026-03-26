@@ -31,6 +31,17 @@ const JU_FLAT = [
 ];
 
 /** American Fixed-doh Chromatic (for comparison reference) */
+/** Ju Solfège — Alternative Spelling */
+const JU_SHARP_ALT = [
+  'Doh', 'di', 'Re', 'ri', 'Mi',
+  'Fah', 'fi', 'Sol', 'si', 'Lah', 'li', 'Ti'
+];
+
+const JU_FLAT_ALT = [
+  'Doh', 'ru', 'Re', 'mu', 'Mi',
+  'Fah', 'su', 'Sol', 'lu', 'Lah', 'tu', 'Ti'
+];
+
 const AMERICAN = [
   'Do', 'Di', 'Re', 'Ri', 'Mi',
   'Fa', 'Fi', 'Sol', 'Si', 'La', 'Li', 'Ti'
@@ -108,6 +119,8 @@ function toSolfege(midi, system = 'ju_sharp', octave = false) {
   const TABLE = {
     ju_sharp: JU_SHARP,  ju: JU_SHARP,
     ju_flat:  JU_FLAT,
+    ju_sharp_alt: JU_SHARP_ALT, ju_alt: JU_SHARP_ALT,
+    ju_flat_alt: JU_FLAT_ALT,
     american: AMERICAN,  us: AMERICAN,
     british:  BRITISH,   english: BRITISH,
     thai:     THAI,

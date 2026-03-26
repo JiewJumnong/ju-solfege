@@ -27,25 +27,25 @@ AI singing voice synthesis (SVS) engines.
 
 ## The 12-Tone Chromatic Scale
 
-| MIDI | Pitch | Ju ♯ (Sharp) | Ju ♭ (Flat) | American | British |
-|------|-------|-------------|------------|----------|---------|
-| 0 mod 12 | C  | **Do**  | **Do**  | Do  | Doh |
-| 1 mod 12 | C# | **Di**  | —       | Di  | Di  |
-| 1 mod 12 | Db | —       | **Ru**  | Ra  | Raw |
-| 2 mod 12 | D  | **Re**  | **Re**  | Re  | Ray |
-| 3 mod 12 | D# | **Ri**  | —       | Ri  | Ri  |
-| 3 mod 12 | Eb | —       | **Mu**  | Me  | Maw |
-| 4 mod 12 | E  | **Mi**  | **Mi**  | Mi  | Me  |
-| 5 mod 12 | F  | **Fa**  | **Fa**  | Fa  | Fah |
-| 6 mod 12 | F# | **Fi**  | —       | Fi  | Fi  |
-| 6 mod 12 | Gb | —       | **Su**  | Se  | Saw |
-| 7 mod 12 | G  | **Sol** | **Sol** | Sol | Soh |
-| 8 mod 12 | G# | **Si**  | —       | Si  | Si  |
-| 8 mod 12 | Ab | —       | **Lu**  | Le  | Law |
-| 9 mod 12 | A  | **La**  | **La**  | La  | Lah |
-| 10 mod 12 | A# | **Li** | —       | Li  | Li  |
-| 10 mod 12 | Bb | —      | **Tu**  | Te  | Taw |
-| 11 mod 12 | B  | **Ti** | **Ti**  | Ti  | Ti  |
+| MIDI | Pitch | Ju ♯ | Ju ♭ | Ju Alt ♯ | Ju Alt ♭ | American | British |
+|------|-------|------|------|----------|----------|----------|---------|
+| 0 mod 12 | C  | **Do**  | **Do**  | **Doh** | **Doh** | Do  | Doh |
+| 1 mod 12 | C# | **Di**  | —       | **di**  | —       | Di  | Di  |
+| 1 mod 12 | Db | —       | **Ru**  | —       | **ru**  | Ra  | Raw |
+| 2 mod 12 | D  | **Re**  | **Re**  | **Re**  | **Re**  | Re  | Ray |
+| 3 mod 12 | D# | **Ri**  | —       | **ri**  | —       | Ri  | Ri  |
+| 3 mod 12 | Eb | —       | **Mu**  | —       | **mu**  | Me  | Maw |
+| 4 mod 12 | E  | **Mi**  | **Mi**  | **Mi**  | **Mi**  | Mi  | Me  |
+| 5 mod 12 | F  | **Fa**  | **Fa**  | **Fah** | **Fah** | Fa  | Fah |
+| 6 mod 12 | F# | **Fi**  | —       | **fi**  | —       | Fi  | Fi  |
+| 6 mod 12 | Gb | —       | **Su**  | —       | **su**  | Se  | Saw |
+| 7 mod 12 | G  | **Sol** | **Sol** | **Sol** | **Sol** | Sol | Soh |
+| 8 mod 12 | G# | **Si**  | —       | **si**  | —       | Si  | Si  |
+| 8 mod 12 | Ab | —       | **Lu**  | —       | **lu**  | Le  | Law |
+| 9 mod 12 | A  | **La**  | **La**  | **Lah** | **Lah** | La  | Lah |
+| 10 mod 12 | A# | **Li** | —       | **li**  | —       | Li  | Li  |
+| 10 mod 12 | Bb | —      | **Tu**  | —       | **tu**  | Te  | Taw |
+| 11 mod 12 | B  | **Ti** | **Ti**  | **Ti**  | **Ti**  | Ti  | Ti  |
 
 ---
 
@@ -157,25 +157,25 @@ Convert a note name string (`"C#4"`, `"Bb3"`) to Ju Solfège.
 
 ## Comparison with Other Systems
 
-| Note | Ju ♯ | Ju ♭ | American | British |
-|------|------|------|----------|---------|
-| C  | Do  | Do  | Do  | Doh |
-| C# | **Di** | —   | Di  | Di  |
-| Db | —   | **Ru** | Ra  | Raw |
-| D  | Re  | Re  | Re  | Ray |
-| D# | **Ri** | —   | Ri  | Ri  |
-| Eb | —   | **Mu** | Me  | Maw |
-| E  | Mi  | Mi  | Mi  | Me  |
-| F  | Fa  | Fa  | Fa  | Fah |
-| F# | **Fi** | —   | Fi  | Fi  |
-| Gb | —   | **Su** | Se  | Saw |
-| G  | Sol | Sol | Sol | Soh |
-| G# | **Si** | —   | Si  | Si  |
-| Ab | —   | **Lu** | Le  | Law |
-| A  | La  | La  | La  | Lah |
-| A# | **Li** | —   | Li  | Li  |
-| Bb | —   | **Tu** | Te  | Taw |
-| B  | Ti  | Ti  | Ti  | Ti  |
+| Note | Ju ♯ | Ju ♭ | Ju Alt ♯ | Ju Alt ♭ | American | British |
+|------|------|------|----------|----------|----------|---------|
+| C  | Do  | Do  | Doh | Doh | Do  | Doh |
+| C# | **Di** | —   | **di** | —   | Di  | Di  |
+| Db | —   | **Ru** | —   | **ru** | Ra  | Raw |
+| D  | Re  | Re  | Re  | Re  | Re  | Ray |
+| D# | **Ri** | —   | **ri** | —   | Ri  | Ri  |
+| Eb | —   | **Mu** | —   | **mu** | Me  | Maw |
+| E  | Mi  | Mi  | Mi  | Mi  | Mi  | Me  |
+| F  | Fa  | Fa  | Fah | Fah | Fa  | Fah |
+| F# | **Fi** | —   | **fi** | —   | Fi  | Fi  |
+| Gb | —   | **Su** | —   | **su** | Se  | Saw |
+| G  | Sol | Sol | Sol | Sol | Sol | Soh |
+| G# | **Si** | —   | **si** | —   | Si  | Si  |
+| Ab | —   | **Lu** | —   | **lu** | Le  | Law |
+| A  | La  | La  | Lah | Lah | La  | Lah |
+| A# | **Li** | —   | **li** | —   | Li  | Li  |
+| Bb | —   | **Tu** | —   | **tu** | Te  | Taw |
+| B  | Ti  | Ti  | Ti  | Ti  | Ti  | Ti  |
 
 ---
 

@@ -225,25 +225,25 @@ labelMelody([<span style="color:#79c0ff">60</span>,<span style="color:#79c0ff">6
 
   // ── Comparison Table ──
   const rows = [
-    ['C','Do','Do','Do','Doh'],
-    ['C#','Di','—','Di','Di'],
-    ['Db','—','Ru','Ra','Raw'],
-    ['D','Re','Re','Re','Ray'],
-    ['D#','Ri','—','Ri','Ri'],
-    ['Eb','—','Mu','Me','Maw'],
-    ['E','Mi','Mi','Mi','Me'],
-    ['F','Fa','Fa','Fa','Fah'],
-    ['F#','Fi','—','Fi','Fi'],
-    ['Gb','—','Su','Se','Saw'],
-    ['G','Sol','Sol','Sol','Soh'],
-    ['G#','Si','—','Si','Si'],
-    ['Ab','—','Lu','Le','Law'],
-    ['A','La','La','La','Lah'],
-    ['A#','Li','—','Li','Li'],
-    ['Bb','—','Tu','Te','Taw'],
-    ['B','Ti','Ti','Ti','Ti'],
+    ['C','Do','Do','Doh','Doh','Do','Doh'],
+    ['C#','Di','—','di','—','Di','Di'],
+    ['Db','—','Ru','—','ru','Ra','Raw'],
+    ['D','Re','Re','Re','Re','Re','Ray'],
+    ['D#','Ri','—','ri','—','Ri','Ri'],
+    ['Eb','—','Mu','—','mu','Me','Maw'],
+    ['E','Mi','Mi','Mi','Mi','Mi','Me'],
+    ['F','Fa','Fa','Fah','Fah','Fa','Fah'],
+    ['F#','Fi','—','fi','—','Fi','Fi'],
+    ['Gb','—','Su','—','su','Se','Saw'],
+    ['G','Sol','Sol','Sol','Sol','Sol','Soh'],
+    ['G#','Si','—','si','—','Si','Si'],
+    ['Ab','—','Lu','—','lu','Le','Law'],
+    ['A','La','La','Lah','Lah','La','Lah'],
+    ['A#','Li','—','li','—','Li','Li'],
+    ['Bb','—','Tu','—','tu','Te','Taw'],
+    ['B','Ti','Ti','Ti','Ti','Ti','Ti'],
   ];
-  const headers = ['Note','Ju ♯ (Sharp)','Ju ♭ (Flat)','American','British'];
+  const headers = ['Note','Ju ♯','Ju ♭','Ju Alt ♯','Ju Alt ♭','American','British'];
   const tbl = document.getElementById('cmp-table');
   tbl.innerHTML = '<tr>' + headers.map(h=>`<th>${h}</th>`).join('') + '</tr>'
     + rows.map(r => '<tr>'
